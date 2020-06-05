@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Unit_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wom-F1-S6e">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-oR-BQn">
+                                        <rect key="frame" x="64" y="0.0" width="286.5" height="75"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="ALO-fd-0Cj"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
+                                    </textField>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTF-Tf-9zU">
+                                        <rect key="frame" x="47" y="76" width="320" height="297"/>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="19.5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-GK-BKW">
+                                        <rect key="frame" x="127" y="374" width="160" height="131"/>
+                                        <color key="tintColor" name="blueColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-2o-pjr">
+                                        <rect key="frame" x="47" y="506" width="320" height="302"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8lO-oR-BQn" firstAttribute="centerX" secondItem="Wom-F1-S6e" secondAttribute="centerX" id="BRs-l5-7VM"/>
+                                    <constraint firstItem="OTF-Tf-9zU" firstAttribute="centerX" secondItem="Wom-F1-S6e" secondAttribute="centerX" id="FFh-Na-d14"/>
+                                    <constraint firstItem="9ps-2o-pjr" firstAttribute="centerX" secondItem="Wom-F1-S6e" secondAttribute="centerX" id="G1Z-3t-bRK"/>
+                                    <constraint firstItem="2Zc-GK-BKW" firstAttribute="centerX" secondItem="Wom-F1-S6e" secondAttribute="centerX" id="tad-LM-2zs"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wom-F1-S6e" secondAttribute="bottom" id="lus-DQ-F3U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wom-F1-S6e" secondAttribute="trailing" id="omk-s8-IUx"/>
+                            <constraint firstItem="Wom-F1-S6e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wwp-l1-WRk"/>
+                            <constraint firstItem="Wom-F1-S6e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zny-DX-2Py"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputPicker" destination="OTF-Tf-9zU" id="WRd-6F-TWG"/>
+                        <outlet property="numberTextField" destination="8lO-oR-BQn" id="rwJ-WX-GMR"/>
+                        <outlet property="outputPicker" destination="9ps-2o-pjr" id="jaL-fa-s91"/>
+                        <outlet property="resultLabel" destination="2Zc-GK-BKW" id="p65-pD-8LZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.1465680003" green="0.37876951689999999" blue="0.6278679371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
